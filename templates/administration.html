@@ -1,0 +1,36 @@
+<html>
+<head>
+<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<h1>User Registration Panel</h1>
+
+<link  href="{{ url_for('static', filename='style.css') }}" />
+
+</style>
+<body>
+ <form action="/administration" method = "POST">
+  First name:
+  <input type="text" name="name" value="James">
+  <br><br>
+  <input type="reset" value="Reset">
+<input type="submit" value="Submit">
+</form> 
+
+<br>
+<br>
+
+<table>
+{% for value in templateList %}
+   <tr>
+        <td> {{ value[0] }} </td>
+        <td> {{ value[1] }} </td>
+        <td> <input type="reset" value="Revoke"> </td>
+   </tr>
+{% endfor %}
+</table>
+
+<br>
+<br>
+<a href="/">Access Log</a><br> 
+<a href="administration">Administration Page</a><br>
+</html>
